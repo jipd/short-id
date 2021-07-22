@@ -1,0 +1,41 @@
+{
+  "name": "@jipd/short-id",
+  "version": "1.0.0",
+  "description": "Short Id Generator",
+  "main": "dist/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf dist && mkdir dist",
+    "build-babel": "babel ./lib -d ./dist -s",
+    "build": "npm run clean && npm run build-babel",
+    "dev": "watch 'npm run build' ./lib",
+    "prepare": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jipd/short-id.git"
+  },
+  "keywords": [
+    "id",
+    "generator",
+    "javascript"
+  ],
+  "author": "Nathan Bryant",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jipd/short-id/issues"
+  },
+  "homepage": "https://github.com/jipd/short-id#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.13.0",
+    "@babel/plugin-transform-runtime": "^7.13.9",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.13.9",
+    "@babel/runtime": "^7.13.9",
+    "babel-preset-minify": "^0.5.1",
+    "watch": "^1.0.2"
+  }
+}
